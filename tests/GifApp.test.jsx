@@ -1,11 +1,11 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { GifExpertApp } from '../src/GifExpertApp';
+import { GifApp } from '../src/GifApp';
 
-describe('Pruebas en el componente <GifExpertApp />', () => {
+describe('Pruebas en el componente <GifApp />', () => {
 
     test('Match con el Snapshot', () => { 
 
-        const {container} = render( <GifExpertApp /> );
+        const {container} = render( <GifApp /> );
 
         expect(container).toMatchSnapshot();
 
@@ -13,7 +13,7 @@ describe('Pruebas en el componente <GifExpertApp />', () => {
     
     test('La caja de texto debe de estar vacia inicialmente', () => { 
 
-        render( <GifExpertApp /> );
+        render( <GifApp /> );
         
         const input = screen.getByRole('textbox');
 
@@ -23,7 +23,7 @@ describe('Pruebas en el componente <GifExpertApp />', () => {
 
     test('Debe de cambiar el valor de la caja de texto', () => { 
 
-        render( <GifExpertApp /> );
+        render( <GifApp /> );
         
         const input = screen.getByRole('textbox');
 
